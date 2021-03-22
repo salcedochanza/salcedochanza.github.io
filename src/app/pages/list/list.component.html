@@ -1,0 +1,21 @@
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let exercice of exercices; let i=index">
+        <td>{{ exercice.title }}</td>
+        <td></td>
+        <td>
+            <button type="button" class="btn btn-primary" [routerLink]="['/details', exercice.id]">Detalls</button>
+            <button type="button" class="btn btn-primary" [routerLink]="['/update', exercice.id]">Actualitza</button>
+            <button type="button" class="btn btn-primary" (click)="deleteExercice(i)">Elimina</button>
+        </td>
+      </tr>
+    </tbody>
+</table>
+<button type="button" class="btn btn-primary" [routerLink]="['/create']">Crea una nova practica</button>

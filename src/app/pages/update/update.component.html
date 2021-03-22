@@ -1,0 +1,20 @@
+<div *ngIf="exercice != null">
+    <div class="form-group">
+        <label for="Title">Title</label>
+        <input type="text" class="form-control" id="Title" aria-describedby="emailHelp" [(ngModel)]="exercice.title">
+        <small id="emailHelp" class="form-text text-muted">Titul descriptiu de la practica</small>
+      </div>
+      <div class="form-group">
+          <label for="Enunciat">Enunciat</label>
+          <input type="text" class="form-control" id="Enunciat" [(ngModel)]="exercice.enunciat">
+          <small id="enunciatHelp" class="form-text text-muted">Enunciat de la practica</small>
+      </div>
+      <div class="form-group">
+          <label for="Modul">Modul</label>
+          <input type="text" class="form-control" id="Modul" [(ngModel)]="exercice.modul">
+          <small id="modulHelp" class="form-text text-muted">Modul pertanyent de la practica</small>
+      </div>
+</div>    
+  
+  <button type="button" class="btn btn-primary" (click)="updateExercice()" [routerLink]="['/list']">Modifica</button>
+  <button type="button" class="btn btn-primary" [routerLink]="['/list']">Torna Enrere</button>
