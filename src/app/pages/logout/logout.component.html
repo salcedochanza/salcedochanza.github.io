@@ -1,0 +1,7 @@
+<app-header></app-header>
+<div class="pt-5"></div> <!-- Separador perque el header esta fix top -->
+<div class="container-fluid">
+    <h4>Vols tancar la sessio de Google?</h4>
+    <button type="button" class="btn btn-primary mr-1" (click)="logout()">Si</button>
+    <button type="button" class="btn btn-primary mr-1" [routerLink]="['/public']">No</button>
+</div>

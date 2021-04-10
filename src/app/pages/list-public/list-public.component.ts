@@ -4,15 +4,14 @@ import { FirebaseauthService } from 'src/app/services/firebaseauth.service';
 import { FirebasedbService } from 'src/app/services/firebasedb.service';
 
 @Component({
-  selector: 'app-list',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css']
+  selector: 'app-list-public',
+  templateUrl: './list-public.component.html',
+  styleUrls: ['./list-public.component.css']
 })
-export class ListComponent implements OnInit {
-
+export class ListPublicComponent implements OnInit {
   public exercices: Exercice[];
   
-  constructor(private firebd: FirebasedbService){
+  constructor(private firebd: FirebasedbService,){
     this.firebd.getExercices().subscribe(
       (originalExercices: Exercice[]) => {
         this.exercices = originalExercices;
@@ -21,10 +20,6 @@ export class ListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  }
-
-  deleteExercice(i: number){
-    this.firebd.deleteExercice(this.exercices[i].id);
   }
 
 }

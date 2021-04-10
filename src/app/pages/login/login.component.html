@@ -1,0 +1,13 @@
+<app-header></app-header>
+<div class="pt-5"></div> <!-- Separador perque el header esta fix top -->
+<div class="container-fluid">
+    <button type="button" class="btn btn-primary mr-1" (click)="login()" *ngIf="!allowedUserError">Iniciar sessió amb Google</button>
+    <button type="button" class="btn btn-primary mr-1" (click)="login()" *ngIf="allowedUserError">Canviar d'usuari de Google</button>
+</div>
+
+<div class="container-fluid" *ngIf="allowedUserError">
+    <h4>Aquest usuari no te permisos d'access</h4>
+</div>
+<div class="container-fluid" *ngIf="loginError">
+    <h4>S'ha produit un error</h4>
+</div>

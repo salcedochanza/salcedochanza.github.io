@@ -1,18 +1,26 @@
-<table class="table table-hover">
+<div class="container-fluid">
+  <table class="table table-hover">
     <thead>
       <tr>
         <th scope="col">Title</th>
-        <th scope="col"></th>
-        <th scope="col"></th>
+        <th scope="col">Enunciat</th>
+        <th scope="col">Modul</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngIf="exercice != null">
         <td>{{ exercice.title }}</td>
         <td>{{ exercice.enunciat }}</td>
-        <td>{{ exercice.modul[0] }}</td>
+        <td>{{ exercice.modul }}</td>
+      </tr>
+      <br>
+      <tr *ngIf="exercice != null">
+        <td colspan="3">
+          {{ exercice.solucio }}
+        </td>
       </tr>
     </tbody>
-</table>
+  </table>
 
-<button type="button" class="btn btn-primary" [routerLink]="['/list']">Torna Enrere</button>
+  <button type="button" class="btn btn-primary" [routerLink]="['/public']">Torna Enrere</button>
+</div>

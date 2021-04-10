@@ -42,4 +42,12 @@ export class FirebasedbService {
   deleteExercice(id:string){
     this.firestore.collection<Exercice>("exercices").doc(id).delete();
   }
+
+  checkAllowedUser(email: string): Observable<any[]> {
+    return this.firestore.collection("allowed_users", ref => this.queryByEmail(email, ref)).valueChanges();
+  }
+
+  private queryByEmail(email: string, ref: any){
+    return ref.where("email", "==", email);
+  }
 }

@@ -14,11 +14,8 @@
         <td style="width: 70%;">{{ exercice.title }}</td>
         <td style="right: inherit;">
           <button type="button" class="btn btn-primary m-1" [routerLink]="['/details', exercice.id]">Detalls</button>
-          <button type="button" class="btn btn-primary m-1" [routerLink]="['/update', exercice.id]">Actualitza</button>
-          <button type="button" class="btn btn-primary m-1" (click)="deleteExercice(i)">Elimina</button>
         </td>
       </tr>
     </tbody>
   </table>
-  <button type="button" class="btn btn-primary" [routerLink]="['/create']">Crea una nova practica</button>
 </div>

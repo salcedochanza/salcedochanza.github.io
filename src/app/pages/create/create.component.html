@@ -1,4 +1,4 @@
-
+<div class="container-fluid">
     <div class="form-group">
       <label for="Title">Title</label>
       <input type="text" class="form-control" id="Title" aria-describedby="emailHelp" [(ngModel)]="exerciceDetails.title">
@@ -14,7 +14,17 @@
         <input type="text" class="form-control" id="Modul" [(ngModel)]="exerciceDetails.modul">
         <small id="modulHelp" class="form-text text-muted">Modul pertanyent de la practica</small>
     </div>
+    <div class="form-group">
+        <label for="Solucio">Solucio</label>
+        <input type="text" class="form-control" id="Solucio" [(ngModel)]="exerciceDetails.solucio">
+        <small id="solucioHelp" class="form-text text-muted">La solucio que has fet en la practica</small>
+    </div>
+    <!-- <div class="form-group">
+        <label for="Image">Imatge</label>
+        <input type="image" class="form-control" id="Image" [(ngModel)]="exerciceDetails.image">
+        <small id="imageHelp" class="form-text text-muted">Imatge sobre la practica</small>
+    </div> -->
     
-
-<button type="button" class="btn btn-primary" (click)="createExercice()" [routerLink]="['/list']">Crea</button>
-<button type="button" class="btn btn-primary" [routerLink]="['/list']">Torna Enrere</button>
+    <button type="button" class="btn btn-primary m-1" (click)="createExercice()" [routerLink]="['/list']">Crea</button>
+    <button type="button" class="btn btn-primary" [routerLink]="['/list']">Torna Enrere</button>
+</div>

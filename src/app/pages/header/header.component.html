@@ -1,0 +1,7 @@
+<nav class="container-fluid fixed-top navbar-light bg-light">
+    <a class="navbar-brand" [routerLink]="['/login']" *ngIf="user==null">Login</a>
+    <a class="navbar-brand" [routerLink]="['/logout']" *ngIf="user!=null">Logout</a>
+    <a class="navbar-brand" [routerLink]="['/public']" *ngIf="user==null">Practiques</a>
+    <a class="navbar-brand" [routerLink]="['/list']" *ngIf="user!=null">Practiques Privades</a>
+    <a class="navbar-brand" [routerLink]="['/curriculum']">Curriculum Vitae</a>
+</nav>
